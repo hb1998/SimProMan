@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { materialExports } from 'src/app/configs/angularMaterialImports';
+import { PriorityComponent } from './components/priority/priority.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [PriorityComponent],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    ...materialExports
+  ],
+  exports:[...materialExports,PriorityComponent]
 })
 export class SharedModule { }

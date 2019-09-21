@@ -1,0 +1,25 @@
+.appContainer{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+}
+
+app-sidemenu{
+    width: 15%;
+    min-width: 150px;
+    height: 100vh;
+}
+.innerContainer{
+    width: 85%;
+    height: 100%;
+}
+app-header{
+    width: 100%;
+    max-height: 50px;
+}
+.rOutlet{
+    max-height: calc(100% - 50px);
+    overflow: auto;
+
+}

@@ -1,0 +1,16 @@
+<div 
+class="task" >
+    <div class="taskHeader">
+        <h4 class="taskName" >{{taskConf.name}}</h4>
+        <simproman-priority [priority]="taskConf.priority"></simproman-priority>
+    </div>
+    <div class="taskInfo">
+        <div class="taskDue">
+            <mat-icon>timer</mat-icon>
+            Due in 04:55</div>
+    </div>
+    <div class="taskActions">
+        <mat-icon  matTooltip="In Process" class="inProcessTick" >done_outline</mat-icon>
+        <mat-icon  matTooltip="Done" class="doneTick" >done_all</mat-icon>
+    </div>
+</div>

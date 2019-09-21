@@ -1,0 +1,68 @@
+// .mainBoardContainer{
+// }
+.boardContainer {
+    background-color: white;
+    width: 28%;
+    border-radius: 20px;
+    min-width: 100px;
+    margin: 10px 10px 10px 10px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 1px lightgrey;
+ 
+
+    .boardHeader{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .inProcessList{
+            color: #007BFF
+        }
+        .doneList{
+            color: #28A745
+        }
+
+        h2,.noInList{
+            color: #525252;
+            font-weight: 500;
+        }
+        .noInList{
+            background-color: slategray;
+            color: white;
+            padding: 3px 5px;
+            border-radius: 5px;
+        }
+    }
+
+    .taskList {
+        min-height: 60px;
+        background: white;
+        overflow: hidden;
+        display: block;
+
+      
+      }
+  }
+  
+  .cdk-drag-preview {
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 2px lightgrey;
+
+  }
+
+  .cdk-drag-placeholder {
+    opacity: 0;
+  }
+  
+  .cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+ 
+
+  
+  .taskList.cdk-drop-list-dragging .taskContainer:not(.cdk-drag-placeholder) {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+  

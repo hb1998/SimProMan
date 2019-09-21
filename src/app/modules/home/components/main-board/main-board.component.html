@@ -1,0 +1,62 @@
+<div class="mainBoardContainer">
+<div class="boardContainer">
+        <div class="boardHeader">
+                <h2 class="todoList" >To do</h2>
+                <h5 class="noInList" >{{todo.length}}</h5>
+            </div>
+        <div
+          cdkDropList
+          #todoList="cdkDropList"
+          [cdkDropListData]="todo"
+          [cdkDropListConnectedTo]="[inProcessList,doneList]"
+          class="taskList"
+          (cdkDropListDropped)="drop($event)">
+          <div class="taskContainer" cdkDrag *ngFor="let item of todo" >
+              <simproman-task 
+              [taskConf]="item"
+              ></simproman-task>
+            </div>
+        </div>
+</div>
+      
+<div class="boardContainer">
+    <div class="boardHeader">
+        <h2 class="inProcessList">In Process</h2>
+        <h5 class="noInList">{{inProcess.length}}</h5>
+    </div>
+    
+        <div
+        cdkDropList
+        #inProcessList="cdkDropList"
+        [cdkDropListData]="inProcess"
+        [cdkDropListConnectedTo]="[doneList,todoList]"
+        class="taskList"
+        (cdkDropListDropped)="drop($event)">
+        <div class="taskContainer" cdkDrag *ngFor="let item of inProcess" >
+            <simproman-task 
+            [taskConf]="item"
+            ></simproman-task>
+        </div>
+        </div>
+</div>
+          
+<div class="boardContainer">
+        <div class="boardHeader">
+                <h2 class="doneList">Done</h2>
+                <h5 class="noInList">{{done.length}}</h5>
+        </div>
+    <div
+        cdkDropList
+        #doneList="cdkDropList"
+        [cdkDropListData]="done"
+        [cdkDropListConnectedTo]="[todoList,inProcessList]"
+        class="taskList"
+        (cdkDropListDropped)="drop($event)">
+        <div class="taskContainer" cdkDrag *ngFor="let item of done" >
+            <simproman-task 
+            [taskConf]="item"
+            ></simproman-task>    
+        </div>
+        </div>
+</div>
+</div>
