@@ -1,6 +1,6 @@
 # SimpromanClient
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
+SimProMan is a Simple Project Management software made for really small teams, startups and those who don't need a pleothra of unwanted features and clutter. It is more like a Todo app on steroids than a full fledged project management software.It follows the KISS priciple.
 
 ## Development server
 
