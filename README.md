@@ -1,6 +1,6 @@
 # SimpromanClient
 
-SimProMan is a Simple Project Management software made for really small teams, startups and those who don't need a pleothra of unwanted features and clutter. It is more like a Todo app on steroids than a full fledged project management software.It follows the KISS priciple.
+SimProMan is a Simple Project Management software made for really small teams, startups and those who don't need a plethora of unwanted features and clutter. It is more like a Todo app on steroids than a full fledged project management software.It follows the KISS priciple.
 
 ## Development server
 
