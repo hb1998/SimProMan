@@ -1,0 +1,13 @@
+<mat-expansion-panel *ngIf="isSubTasks"  >
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Sub Tasks
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div *ngFor="let subTask of subTasks"  class="subTask">
+            <mat-icon class="done" >check_circle</mat-icon>
+            <div class="subTaskName">
+                {{subTask.name}}
+            </div>
+        </div>
+    </mat-expansion-panel>

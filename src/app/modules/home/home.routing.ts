@@ -5,10 +5,10 @@ import { HomeComponent } from 'src/app/modules/home/home.component';
 const routes: Routes = [
     {
         path:'',
-        redirectTo:'home',
+        redirectTo:'myBoard',
         pathMatch:'full'
     },{
-        path:'home',
+        path:'myBoard',
         component:HomeComponent
     }
 ];

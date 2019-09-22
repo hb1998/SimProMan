@@ -19,6 +19,7 @@
 
         .taskName{
             margin: 0px;
+            font-weight: 500;
         }
     }
     .taskInfo{
@@ -27,6 +28,9 @@
             color: darkgrey;
             display: flex;
         }
+    }
+    .subTasks{
+        margin-bottom: 10px;
     }
     .taskActions{
         display: flex;

@@ -13,7 +13,21 @@ export class MainBoardComponent implements OnInit {
   todo = [
     {
       name: 'Get to work',
-      priority: 'high'
+      priority: 'high',
+      subtasks: [
+        {
+          name: 'Get to work',
+          priority: 'high',
+        },
+        {
+          name: 'Get to work',
+          priority: 'high',
+        },
+        {
+          name: 'Get to work',
+          priority: 'high',
+        },
+      ]
     },
     {
       name: 'Pick up groceries',
@@ -26,7 +40,39 @@ export class MainBoardComponent implements OnInit {
     {
       name: 'Fall asleep',
       priority: 'low'
-    }
+    },
+    {
+      name: 'Go home',
+      priority: 'medium'
+    },
+    {
+      name: 'Fall asleep',
+      priority: 'low'
+    },
+    {
+      name: 'Go home',
+      priority: 'medium'
+    },
+    {
+      name: 'Fall asleep',
+      priority: 'low'
+    },
+    {
+      name: 'Go home',
+      priority: 'medium'
+    },
+    {
+      name: 'Fall asleep',
+      priority: 'low'
+    },
+    {
+      name: 'Go home',
+      priority: 'medium'
+    },
+    {
+      name: 'Fall asleep',
+      priority: 'low'
+    },
   ];
 
   inProcess = [
@@ -68,6 +114,7 @@ export class MainBoardComponent implements OnInit {
   ];
   ngOnInit() {
   }
+
 
 
 

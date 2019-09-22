@@ -10,6 +10,7 @@
     vertical-align: top;
     padding: 10px;
     box-shadow: 0px 0px 10px 1px lightgrey;
+   
  
 
     .boardHeader{
@@ -39,10 +40,14 @@
     .taskList {
         min-height: 60px;
         background: white;
-        overflow: hidden;
         display: block;
+        max-height: calc(100vh - 235px );
+        overflow-y: auto;
 
-      
+        // for scroll bar
+        .taskContainer{
+          padding-right: 3px;
+        }
       }
   }
   
@@ -66,3 +71,20 @@
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
   }
   
+  ::-webkit-scrollbar { 
+    width: 5px;
+   }
+   ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: lightgray;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: darkgrey;
+  }

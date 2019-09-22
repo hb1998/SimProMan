@@ -1,4 +1,5 @@
-
+// Montserrat font
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
@@ -9,10 +10,46 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+// CUSTOM PALETTE COLORS
+/* For use in src/lib/core/theming/_palette.scss */
+$primary: (
+    50 : #eef3fd,
+    100 : #d4e2fa,
+    200 : #b8cff7,
+    300 : #9cbbf4,
+    400 : #86adf1,
+    500 : #719eef,
+    600 : #6996ed,
+    700 : #5e8ceb,
+    800 : #5482e8,
+    900 : #4270e4,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #cfdcff,
+    A700 : #b6caff,
+    contrast: (
+        50 : white,
+        100 : white,
+        200 : white,
+        300 : white,
+        400 : white,
+        500 : white,
+        600 : white,
+        700 : white,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : white,
+        A200 : white,
+        A400 : white,
+        A700 : white,
+    )
+);
+
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$simpromanClient-primary: mat-palette($mat-indigo);
+$simpromanClient-primary: mat-palette($primary);
 $simpromanClient-accent: mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
@@ -28,10 +65,28 @@ $simpromanClient-theme: mat-light-theme($simpromanClient-primary, $simpromanClie
 
 /* You can add global styles to this file, and also import other style files */
 
+// // bootstrap 
+// @import '~bootstrap/dist/css/bootstrap.min.css';
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+// REMOVE BLUE BORDER FROM INPUT 
+
+input:focus{
+outline: none;
+}
 // MATERIAL ICON OVERRIDE
 .material-icons{
     font-size: 18px;
+}
+
+//MATERIAL EXPANSION MODULE OVERRIDE
+
+.mat-expansion-panel{
+    box-shadow: none !important;
+}
+
+.mat-expansion-panel-header{
+    font-size: 12px;
 }

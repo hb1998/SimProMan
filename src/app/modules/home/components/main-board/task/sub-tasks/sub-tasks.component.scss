@@ -1,0 +1,10 @@
+.subTask{
+display: flex;
+    .subTaskName{
+        font-size: 12px;
+    }
+    .done{
+    color: #28A745;
+    cursor: pointer;
+    }
+}
