@@ -1,11 +1,17 @@
 <div class="homeContainer">
-  <div class="addTask">
-      <button mat-mini-fab color="primary">
-          <mat-icon>add</mat-icon>
-        </button>
-   
+  <div class="controlsContainer">
+
+    <div class="addTask">
+      <button (click)="addTask()" mat-mini-fab color="primary">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+    <div class="views">
+      <mat-icon>subject</mat-icon>
+      <mat-icon>short_text</mat-icon>
+    </div>
+
   </div>
-  <div>
+  
     <simproman-main-board></simproman-main-board>
-  </div>
 </div>

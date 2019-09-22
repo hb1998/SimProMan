@@ -16,7 +16,7 @@ export class MainBoardComponent implements OnInit {
       priority: 'high',
       subtasks: [
         {
-          name: 'Get to work',
+          name: 'Get to work, test test etstes tetstts aksjh ',
           priority: 'high',
         },
         {
@@ -78,7 +78,21 @@ export class MainBoardComponent implements OnInit {
   inProcess = [
     {
       name: "test",
-      priority: 'high'
+      priority: 'high',
+      subtasks: [
+        {
+          name: 'Get to work, test test etstes tetstts aksjh ',
+          priority: 'high',
+        },
+        {
+          name: 'Get to work',
+          priority: 'high',
+        },
+        {
+          name: 'Get to work',
+          priority: 'high',
+        },
+      ]
     },
     {
       name: "test",

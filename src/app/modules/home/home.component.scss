@@ -1,20 +1,22 @@
 .homeContainer{
     padding: 10px;
-    .addTask{
+
+    .controlsContainer{
         display: flex;
         align-items: center;
-        margin: 10px 0px 5px 10px;
-        position: sticky;
-        top: 20px;
-
-       .inputTask{
-        margin-left: 10px;
-        height: 25px;
-        width: 200px;
-        border-radius: 20px;
-        border: 1px solid darkgray;
-
+        justify-content: space-between;
+        .addTask{
+            display: flex;
+            align-items: center;
+            margin: 10px 0px 5px 10px;
+            position: sticky;
+            top: 20px;
         }
-        
+        .views{
+            margin-right: 20px;
+            & mat-icon{
+                cursor: pointer;
+            }
+        }
     }
 }

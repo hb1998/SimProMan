@@ -15,6 +15,9 @@ export class TaskComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    setTimeout(() => {
+        this.shrinkMode()
+    }, 2000);
   }
 
   ngOnChanges(changes: SimpleChanges) {
@@ -23,6 +26,20 @@ export class TaskComponent implements OnInit {
     }catch(err){
 
     }
+  }
+
+  shrinkMode(){
+    document.querySelectorAll('.task').forEach((task:HTMLElement)=>{
+      task.style.maxHeight = "60px";
+      task.style.overflow = "hidden";
+    })
+  }
+
+  expandedMode(){
+    document.querySelectorAll('.task').forEach((task:HTMLElement)=>{
+      task.style.maxHeight = "260px";
+      task.style.overflow = "hidden";
+    })
   }
 
 }

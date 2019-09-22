@@ -89,4 +89,35 @@ outline: none;
 
 .mat-expansion-panel-header{
     font-size: 12px;
+    padding: 0px 3px !important;
 }
+.mat-expansion-panel-body {
+    padding: 0 5px 5px !important ;
+}
+
+// MATERIAL CHECKBOX OVERRIDE
+
+.mat-checkbox-layout{
+    white-space: normal !important;
+}
+
+// SCROLL BAR OVERRIDE
+
+    ::-webkit-scrollbar { 
+    width: 5px;
+   }
+   ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: lightgray;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: darkgrey;
+  }
+

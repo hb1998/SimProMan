@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { subTask } from 'src/app/shared/models/task';
+import {  FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'simproman-add-task-modal',
@@ -7,9 +9,47 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddTaskModalComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private fb:FormBuilder
+  ) { }
+
+  addTaskForm = this.fb.group({
+    name:['',Validators.required],
+    description:'',
+    priority:'low',
+    DrT:'time',
+    date:'',
+    time:''
+    // subTasks:this.fb.array([
+    //   this.fb.group({
+    //     name:"Go to work",
+    //     done:false
+    //   })
+    // ])
+    
+  })
+  subTasks:Array<subTask> = [
+    {
+      name:"Go to work",
+      done:false
+    }
+  ]
+
+  timeUnits = ["m","h","d"]
 
   ngOnInit() {
+  }
+  addSubTask(){
+    this.subTasks.push(
+      {
+        name:"Go to work",
+        done:false
+      }
+    )
+
+  }
+  deleteSubTask(index){
+    this.subTasks.splice(index,1)
   }
 
 }

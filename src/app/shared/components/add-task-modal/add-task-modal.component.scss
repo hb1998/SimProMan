@@ -1,0 +1,82 @@
+.modal{
+    width: 300px;
+    .modal-header{
+        padding-bottom:15px;
+        font-size: 18px;
+        color: cornflowerblue;
+    }
+    .dTime{
+        display: flex;
+    }
+
+    .timePicker{
+        width: 200px;
+
+        .timeUnit{
+            padding: 3px;
+            border-radius: 2px;
+        }
+        .timeInput{
+            width: 40px;
+            border:1px solid darkgrey;
+            border-radius: 4px;
+            padding-left: 4px;
+
+        }
+    }
+   
+   
+    .subTasksContainer{
+        max-height: 130px;
+        overflow-y: auto;
+  
+
+    .subTask
+    {
+         input{
+         border: 0px;
+         border-bottom: 1px solid cornflowerblue;
+         width: 195px;
+         padding-left: 10px;
+         padding-bottom: 5px;
+         &:focus{
+             border-bottom: 2px solid  cornflowerblue;
+         }
+        }
+    }
+}
+
+
+    .actions{
+        display: flex;
+        flex-direction: row-reverse;
+        padding-top: 10px;
+    }
+
+
+}
+
+// MATERIAL OVERRIDES
+
+.mat-form-field{
+    width: 100%;
+}
+.mat-radio-button{
+    margin-right: 5px;
+    margin-bottom: 15px;
+}
+
+.mat-expansion-panel-header{
+    font-size: 14px;
+}
+
+.mat-slider{
+    padding:0px;
+    height: 35px;
+}
+.mat-slider-horizontal{
+    width: 100%
+}
+
+
+

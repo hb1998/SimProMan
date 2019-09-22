@@ -3,6 +3,85 @@
         Add Task
     </div>
     <div class="modal-body">
-        
+        <form [formGroup]="addTaskForm">
+            <mat-form-field appearance="outline">
+                <mat-label>Name</mat-label>
+                <input formControlName="name" autocomplete="off" matInput placeholder="Get To work">
+            </mat-form-field>
+            <div class="dTime">
+                <mat-radio-group formControlName="DrT" aria-label="Select an option">
+                    <mat-radio-button value="time">Time</mat-radio-button>
+                    <mat-radio-button value="date">Date</mat-radio-button>
+                </mat-radio-group>
+                <mat-form-field *ngIf="addTaskForm.get('DrT').value === 'date';else time" formControlName="date">
+                    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <ng-template #time >
+                    <div class="timePicker" >
+                        <div>
+                            <input class="timeInput" >
+                            <span class="timeUnit" *ngFor="let timeUnit of timeUnits" > {{timeUnit}} </span>
+                        </div>
+                        <mat-slider 
+                        color="primary"
+                        step="0.5"
+                        max="24"
+                        thumbLabel="true"
+                        ></mat-slider>
+                    </div>
+                </ng-template>
+
+            </div>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Description</mat-label>
+                <input formControlName="description" autocomplete="off" matInput placeholder="Get To work">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Priority</mat-label>
+                <mat-select formControlName="priority">
+                    <mat-option value="high">High</mat-option>
+                    <mat-option value="medium">Medium</mat-option>
+                    <mat-option value="low">Low</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <div class="subTasks">
+                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Sub-Tasks
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <ng-template matExpansionPanelContent>
+                        <div class="subTasksContainer">
+
+                            <ol class="addSubTasks">
+                                <li *ngFor="let subTask of subTasks,let i = index" class="subTask">
+                                    <input [(ngModel)]="subTask.name" [ngModelOptions]="{standalone: true}">
+                                    <button *ngIf="subTasks.length-1 === i;else delete" (click)="addSubTask()"
+                                        color="primary" mat-icon-button>
+                                        <mat-icon>add</mat-icon>
+                                    </button>
+                                    <ng-template #delete>
+                                        <button (click)="deleteSubTask(i)" color="warn" mat-icon-button>
+                                            <mat-icon>delete_outline</mat-icon>
+                                        </button>
+                                    </ng-template>
+                                </li>
+                            </ol>
+                        </div>
+
+                    </ng-template>
+                </mat-expansion-panel>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <button mat-flat-button color="primary">Add</button>
+        <button mat-flat-button>Cancel</button>
     </div>
 </div>

@@ -3,7 +3,7 @@ import { User } from 'src/app/shared/models/user';
 
 export interface Task {
     name:string,
-    priority:string,
+    priority?:string,
     subtasks?:Array<subTask>
     assignees?:Array<User>,
     assigner?:User,
