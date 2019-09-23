@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, SimpleChanges, Output } from '@angular/core';
 import { Task } from 'src/app/shared/models/task';
 import { EventEmitter } from 'events';
+import { MainBoardService } from 'src/app/modules/home/services/main-board.service';
 
 @Component({
   selector: 'simproman-task',
@@ -12,12 +13,12 @@ export class TaskComponent implements OnInit {
   @Input() taskConf:Task;
 
   @Output() emitAction:EventEmitter = new EventEmitter();
-  constructor() { }
+  constructor(
+    public mainBoardService:MainBoardService
+  ) { }
 
   ngOnInit() {
-    setTimeout(() => {
-        // this.shrinkMode()
-    }, 2000);
+   this.subscribeToViewMode()
   }
 
   ngOnChanges(changes: SimpleChanges) {
@@ -27,18 +28,35 @@ export class TaskComponent implements OnInit {
 
     }
   }
-
-  shrinkMode(){
-    document.querySelectorAll('.task').forEach((task:HTMLElement)=>{
-      task.style.maxHeight = "60px";
-      task.style.overflow = "hidden";
+  subscribeToViewMode(){
+    this.mainBoardService.viewMode.subscribe((res)=>{
+      if(res === 'short'){
+        this.shortModeAll()
+      }else{
+        this.longModeAll()
+      }
     })
   }
 
-  expandedMode(){
+  shortModeSingle(task){
+    task.style.maxHeight = "60px";
+    task.style.overflow = "hidden";
+  }
+  longModeSingle(task){
+    task.style.maxHeight = "260px";
+    task.style.overflow = "hidden";
+  }
+
+
+  shortModeAll(){
     document.querySelectorAll('.task').forEach((task:HTMLElement)=>{
-      task.style.maxHeight = "260px";
-      task.style.overflow = "hidden";
+     this.shortModeSingle(task)
+    })
+  }
+
+  longModeAll(){
+    document.querySelectorAll('.task').forEach((task:HTMLElement)=>{
+     this.longModeSingle(task)
     })
   }
 

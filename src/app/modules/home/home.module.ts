@@ -6,6 +6,7 @@ import { MainBoardComponent } from './components/main-board/main-board.component
 import { SharedModule } from 'src/app/shared/shared.module';
 import { TaskComponent } from './components/main-board/task/task.component';
 import { SubTasksComponent } from './components/main-board/task/sub-tasks/sub-tasks.component';
+import { MainBoardService } from 'src/app/modules/home/services/main-board.service';
 
 @NgModule({
   declarations: [HomeComponent, MainBoardComponent, TaskComponent, SubTasksComponent],
@@ -15,6 +16,7 @@ import { SubTasksComponent } from './components/main-board/task/sub-tasks/sub-ta
     SharedModule
     
   ],
+  providers:[MainBoardService]
   
 })
 export class HomeModule { }

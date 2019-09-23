@@ -7,11 +7,19 @@
       </button>
     </div>
     <div class="views">
-      <mat-icon>subject</mat-icon>
-      <mat-icon>short_text</mat-icon>
+      <button 
+      [color]="viewMode === 'short'?'primary':'none'"
+      (click)="toggleView('short')" mat-icon-button >
+        <mat-icon>short_text</mat-icon>
+      </button>
+      <button (click)="toggleView('long')"
+      [color]="viewMode === 'long'?'primary':'none'"
+      mat-icon-button >
+        <mat-icon>subject</mat-icon>
+      </button>
     </div>
 
   </div>
-  
-    <simproman-main-board></simproman-main-board>
+
+  <simproman-main-board></simproman-main-board>
 </div>
