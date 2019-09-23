@@ -16,7 +16,7 @@ export class TaskComponent implements OnInit {
 
   ngOnInit() {
     setTimeout(() => {
-        this.shrinkMode()
+        // this.shrinkMode()
     }, 2000);
   }
 
