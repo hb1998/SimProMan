@@ -7,16 +7,16 @@
       </button>
     </div>
     <div class="views">
-      <button 
-      [color]="viewMode === 'short'?'primary':'none'"
-      (click)="toggleView('short')" mat-icon-button >
+      <button  *ngIf="viewMode !== 'short';else long"
+        (click)="toggleView('short')" mat-icon-button>
         <mat-icon>short_text</mat-icon>
       </button>
-      <button (click)="toggleView('long')"
-      [color]="viewMode === 'long'?'primary':'none'"
-      mat-icon-button >
-        <mat-icon>subject</mat-icon>
-      </button>
+      <ng-template #long>
+        <button (click)="toggleView('long')" mat-icon-button>
+          <mat-icon>subject</mat-icon>
+        </button>
+      </ng-template>
+
     </div>
 
   </div>

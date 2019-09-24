@@ -14,6 +14,7 @@
           <div class="taskContainer" cdkDrag *ngFor="let item of todo" >
               <simproman-task 
               [taskConf]="item"
+              [taskType]="'toDo'"
               ></simproman-task>
             </div>
         </div>
@@ -35,6 +36,7 @@
         <div class="taskContainer" cdkDrag *ngFor="let item of inProcess" >
             <simproman-task 
             [taskConf]="item"
+            [taskType]="'inProcess'"
             ></simproman-task>
         </div>
         </div>
@@ -55,6 +57,7 @@
         <div class="taskContainer" cdkDrag *ngFor="let item of done" >
             <simproman-task 
             [taskConf]="item"
+            [taskType]="'done'"
             ></simproman-task>    
         </div>
         </div>

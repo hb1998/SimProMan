@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { subTask } from 'src/app/shared/models/task';
 import {  FormBuilder, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'simproman-add-task-modal',
@@ -10,7 +11,8 @@ import {  FormBuilder, Validators } from '@angular/forms';
 export class AddTaskModalComponent implements OnInit {
 
   constructor(
-    private fb:FormBuilder
+    private fb:FormBuilder,
+    private MatdialogRef:MatDialogRef<AddTaskModalComponent>
   ) { }
 
   addTaskForm = this.fb.group({
@@ -45,11 +47,18 @@ export class AddTaskModalComponent implements OnInit {
         name:"Go to work",
         done:false
       }
+      
     )
 
   }
   deleteSubTask(index){
     this.subTasks.splice(index,1)
+  }
+  addTask(){
+
+  }
+  cancel(){
+    this.MatdialogRef.close()
   }
 
 }

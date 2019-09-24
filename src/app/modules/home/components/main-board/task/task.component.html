@@ -1,21 +1,24 @@
-<div class="task" (dblclick)="shortModeSingle($event.path[0].closest('.task'))" >
-    <div class="taskHeader">
-        <h4 class="taskName">{{taskConf.name}}</h4>
-        <simproman-priority [priority]="taskConf.priority"></simproman-priority>
-    </div>
-    <div class="taskInfo">
-        <div class="taskDue">
-            <mat-icon>timer</mat-icon>
-            Due in 04:55
+<div class="task" >
+    <span class="expanArea" (dblclick)="toggleTask($event.path[0].closest('.task'))" >
+        <div class="taskHeader">
+            <h4 class="taskName">{{taskConf.name}}</h4>
+            <simproman-priority [priority]="taskConf.priority"></simproman-priority>
         </div>
-    </div>
+        <div class="taskInfo">
+            <div class="taskDue">
+                <mat-icon>timer</mat-icon>
+                Due in 04:55
+            </div>
+        </div>
+    </span>
     <div class="subTasks">
-        <simproman-sub-tasks [subTasks]="taskConf.subtasks" ></simproman-sub-tasks>
+        <simproman-sub-tasks [subTasks]="taskConf.subtasks"></simproman-sub-tasks>
     </div>
-    
+
 
     <div class="taskActions">
-        <mat-icon matTooltip="In Process" class="inProcessTick">done_outline</mat-icon>
-        <mat-icon matTooltip="Done" class="doneTick">done_all</mat-icon>
+        <mat-icon *ngIf="taskType === 'inProcess' || taskType === 'done' "    matTooltip="Todo" class="todoIcon">assignment</mat-icon>
+        <mat-icon *ngIf="taskType === 'toDo'|| taskType === 'done' "   matTooltip="In Process" class="inProcessIcon">assignment_returned</mat-icon>
+        <mat-icon *ngIf="taskType === 'inProcess' || taskType === 'toDo' "    matTooltip="Done" class="doneIcon">assignment_turned_in</mat-icon>
     </div>
 </div>
