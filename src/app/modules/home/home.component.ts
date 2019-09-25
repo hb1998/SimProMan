@@ -10,30 +10,30 @@ import { MainBoardService } from 'src/app/modules/home/services/main-board.servi
 })
 export class HomeComponent implements OnInit {
 
-  viewMode:string="long";
+  viewMode = 'long';
   constructor(
-    public dialog:MatDialog,
-    public mainBoardService:MainBoardService
+    public dialog: MatDialog,
+    public mainBoardService: MainBoardService
   ) { }
 
   ngOnInit() {
-    this.subscribeToViewMode()
+    this.subscribeToViewMode();
   }
 
-  addTask(){
-    const dialogRef = this.dialog.open(AddTaskModalComponent)
-    dialogRef.afterClosed().subscribe((res)=>{
-      console.log(res)
-    })
+  addTask() {
+    const dialogRef = this.dialog.open(AddTaskModalComponent);
+    dialogRef.afterClosed().subscribe((res) => {
+      console.log(res);
+    });
   }
 
-  subscribeToViewMode(){
-    this.mainBoardService.viewMode.subscribe((res)=>{
-      this.viewMode = res
-    })
+  subscribeToViewMode() {
+    this.mainBoardService.viewMode.subscribe((res) => {
+      this.viewMode = res;
+    });
   }
-  toggleView(mode){
-    this.mainBoardService.viewMode.next(mode)
+  toggleView(mode) {
+    this.mainBoardService.viewMode.next(mode);
   }
 
 }

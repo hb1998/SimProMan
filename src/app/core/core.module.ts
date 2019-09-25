@@ -10,6 +10,6 @@ import { HeaderComponent } from './components/header/header.component';
     CommonModule,
     SharedModule
   ],
-  exports:[SidemenuComponent,HeaderComponent]
+  exports: [SidemenuComponent, HeaderComponent]
 })
 export class CoreModule { }

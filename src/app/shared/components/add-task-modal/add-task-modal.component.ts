@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { subTask } from 'src/app/shared/models/task';
+import { SubTask } from 'src/app/shared/models/task';
 import {  FormBuilder, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material';
 
@@ -11,54 +11,56 @@ import { MatDialogRef } from '@angular/material';
 export class AddTaskModalComponent implements OnInit {
 
   constructor(
-    private fb:FormBuilder,
-    private MatdialogRef:MatDialogRef<AddTaskModalComponent>
+    private fb: FormBuilder,
+    private MatdialogRef: MatDialogRef<AddTaskModalComponent>
   ) { }
 
   addTaskForm = this.fb.group({
-    name:['',Validators.required],
-    description:'',
-    priority:'low',
-    DrT:'time',
-    date:'',
-    time:''
+    name: ['', Validators.required],
+    description: '',
+    priority: 'low',
+    isDate: false,
+    isDuration: false,
+    durationUnit: 'h',
+    date: '',
+    duration: ''
     // subTasks:this.fb.array([
     //   this.fb.group({
     //     name:"Go to work",
     //     done:false
     //   })
     // ])
-    
-  })
-  subTasks:Array<subTask> = [
-    {
-      name:"Go to work",
-      done:false
-    }
-  ]
 
-  timeUnits = ["m","h","d"]
+  });
+  subTasks: Array<SubTask> = [
+    {
+      name: 'Go to work',
+      done: false
+    }
+  ];
+
+  timeUnits = ['m', 'h', 'd'];
 
   ngOnInit() {
   }
-  addSubTask(){
+  addSubTask() {
     this.subTasks.push(
       {
-        name:"Go to work",
-        done:false
+        name: 'Go to work',
+        done: false
       }
-      
-    )
+
+    );
 
   }
-  deleteSubTask(index){
-    this.subTasks.splice(index,1)
+  deleteSubTask(index) {
+    this.subTasks.splice(index, 1);
   }
-  addTask(){
+  addTask() {
 
   }
-  cancel(){
-    this.MatdialogRef.close()
+  cancel() {
+    this.MatdialogRef.close();
   }
 
 }

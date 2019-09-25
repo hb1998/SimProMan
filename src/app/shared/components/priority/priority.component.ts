@@ -6,5 +6,5 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./priority.component.scss']
 })
 export class PriorityComponent  {
-  @Input() priority:string;
+  @Input() priority: string;
 }

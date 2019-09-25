@@ -12,9 +12,10 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     ...materialExports,
     FormsModule,
     ReactiveFormsModule,
+
   ],
-  exports:[...materialExports,PriorityComponent,AddTaskModalComponent],
-  entryComponents:[AddTaskModalComponent]
+  exports: [...materialExports, PriorityComponent, AddTaskModalComponent],
+  entryComponents: [AddTaskModalComponent]
 
 })
 export class SharedModule { }

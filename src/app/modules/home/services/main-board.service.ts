@@ -6,7 +6,7 @@ import { Subject } from 'rxjs';
 })
 export class MainBoardService {
 
-  viewMode:Subject<any> = new Subject<any>();
+  viewMode: Subject<any> = new Subject<any>();
   constructor() { }
 
 

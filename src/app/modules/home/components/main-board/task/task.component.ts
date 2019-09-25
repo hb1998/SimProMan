@@ -10,62 +10,62 @@ import { MainBoardService } from 'src/app/modules/home/services/main-board.servi
 })
 export class TaskComponent implements OnInit {
 
-  @Input() taskConf:Task;
-  @Input() taskType:string;
-  @Output() emitAction:EventEmitter = new EventEmitter();
+  @Input() taskConf: Task;
+  @Input() taskType: string;
+  @Output() emitAction: EventEmitter = new EventEmitter();
   constructor(
-    public mainBoardService:MainBoardService
+    public mainBoardService: MainBoardService
   ) { }
 
   ngOnInit() {
-   this.subscribeToViewMode()
+   this.subscribeToViewMode();
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    try{
-      this.taskConf = changes.taskConf.currentValue
-    }catch(err){
+    try {
+      this.taskConf = changes.taskConf.currentValue;
+    } catch (err) {
 
     }
   }
-  subscribeToViewMode(){
-    this.mainBoardService.viewMode.subscribe((res)=>{
-      if(res === 'short'){
-        this.shortModeAll()
-      }else{
-        this.longModeAll()
+  subscribeToViewMode() {
+    this.mainBoardService.viewMode.subscribe((res) => {
+      if (res === 'short') {
+        this.shortModeAll();
+      } else {
+        this.longModeAll();
       }
-    })
+    });
   }
 
-  toggleTask(task:HTMLElement){
-    if(task.style.maxHeight !== "60px"){
-      this.shortModeSingle(task)
-    }else{
-      this.longModeSingle(task)
+  toggleTask(task: HTMLElement) {
+    if (task.style.maxHeight !== '60px') {
+      this.shortModeSingle(task);
+    } else {
+      this.longModeSingle(task);
     }
   }
   // seperate functions for all functionalities to avoid comparsions when toggling
-  shortModeSingle(task){
-    task.style.maxHeight = "60px";
-    task.style.overflow = "hidden";
+  shortModeSingle(task) {
+    task.style.maxHeight = '60px';
+    task.style.overflow = 'hidden';
   }
-  longModeSingle(task){
-    task.style.maxHeight = "260px";
-    task.style.overflow = "hidden";
-  }
-
-
-  shortModeAll(){
-    document.querySelectorAll('.task').forEach((task:HTMLElement)=>{
-     this.shortModeSingle(task)
-    })
+  longModeSingle(task) {
+    task.style.maxHeight = '260px';
+    task.style.overflow = 'hidden';
   }
 
-  longModeAll(){
-    document.querySelectorAll('.task').forEach((task:HTMLElement)=>{
-     this.longModeSingle(task)
-    })
+
+  shortModeAll() {
+    document.querySelectorAll('.task').forEach((task: HTMLElement) => {
+     this.shortModeSingle(task);
+    });
+  }
+
+  longModeAll() {
+    document.querySelectorAll('.task').forEach((task: HTMLElement) => {
+     this.longModeSingle(task);
+    });
   }
 
 }

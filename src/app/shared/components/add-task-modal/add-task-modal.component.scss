@@ -7,20 +7,40 @@
     }
     .dTime{
         display: flex;
+        align-items: center;
+        height: 40px;
+        .mat-checkbox{
+            padding-right: 20px;
+        }
     }
 
-    .timePicker{
-        width: 200px;
+    .timeDuration{
+        display: flex;
+        align-items: center;
+        height: 40px;
 
+        .durationContainer{
+            display: flex;
+            align-items: center;
+
+            .mat-slider{
+                position: relative;
+                top: -5px;
+            }
+        }
         .timeUnit{
-            padding: 3px;
-            border-radius: 2px;
+            padding: 7px;
+            select{
+                padding: 5px;
+                border-radius: 5px;
+                outline: none;
+            }
         }
         .timeInput{
             width: 40px;
             border:1px solid darkgrey;
-            border-radius: 4px;
-            padding-left: 4px;
+            border-radius: 5px;
+            padding:5px 1px;
 
         }
     }
@@ -60,6 +80,7 @@
 
 .mat-form-field{
     width: 100%;
+    font-size: 14px;
 }
 .mat-radio-button{
     margin-right: 5px;
@@ -75,8 +96,9 @@
     height: 35px;
 }
 .mat-slider-horizontal{
-    width: 100%
+    min-width: 115px;
 }
+
 
 
 

@@ -9,29 +9,25 @@
                 <input formControlName="name" autocomplete="off" matInput placeholder="Get To work">
             </mat-form-field>
             <div class="dTime">
-                <mat-radio-group formControlName="DrT" aria-label="Select an option">
-                    <mat-radio-button value="time">Time</mat-radio-button>
-                    <mat-radio-button value="date">Date</mat-radio-button>
-                </mat-radio-group>
-                <mat-form-field *ngIf="addTaskForm.get('DrT').value === 'date';else time" >
-                    <input formControlName="date" matInput [matDatepicker]="picker" placeholder="Choose a date">
+                <mat-checkbox formControlName="isDate" color="primary">Date</mat-checkbox>
+                <mat-form-field *ngIf="addTaskForm.get('isDate').value">
+                    <input formControlName="date" matInput [matDatepicker]="picker" placeholder="Due Date">
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
-                <ng-template #time >
-                    <div class="timePicker" >
-                        <div>
-                            <input class="timeInput" >
-                            <span class="timeUnit" *ngFor="let timeUnit of timeUnits" > {{timeUnit}} </span>
-                        </div>
-                        <mat-slider 
-                        color="primary"
-                        step="0.5"
-                        max="24"
-                        thumbLabel="true"
-                        ></mat-slider>
+            </div>
+            <div class="timeDuration">
+                <mat-checkbox formControlName="isDuration" color="primary">Duration</mat-checkbox>
+                <div class="durationContainer" *ngIf="addTaskForm.get('isDuration').value">
+                    <div class="timeUnit">
+                        <select formControlName="durationUnit">
+                            <option *ngFor="let timeUnit of timeUnits" [value]="timeUnit">{{timeUnit}} </option>
+                        </select>
                     </div>
-                </ng-template>
+                    <mat-slider color="primary" step="0.5" max="24" thumbLabel="true"></mat-slider>
+                    <input class="timeInput">
+
+                </div>
 
             </div>
 
@@ -46,11 +42,12 @@
                     <mat-option value="high">High</mat-option>
                     <mat-option value="medium">Medium</mat-option>
                     <mat-option value="low">Low</mat-option>
+                    <mat-option value="roadmap">RoadMap</mat-option>
                 </mat-select>
             </mat-form-field>
 
             <div class="subTasks">
-                <mat-expansion-panel >
+                <mat-expansion-panel>
                     <mat-expansion-panel-header>
                         <mat-panel-title>
                             Sub-Tasks

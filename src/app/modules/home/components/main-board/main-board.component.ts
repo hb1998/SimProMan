@@ -77,7 +77,7 @@ export class MainBoardComponent implements OnInit {
 
   inProcess = [
     {
-      name: "test",
+      name: 'test',
       priority: 'high',
       subtasks: [
         {
@@ -95,14 +95,14 @@ export class MainBoardComponent implements OnInit {
       ]
     },
     {
-      name: "test",
+      name: 'test',
       priority: 'medium'
     },
     {
-      name: "test",
+      name: 'test',
       priority: 'low'
     }
-  ]
+  ];
 
   done = [
     {

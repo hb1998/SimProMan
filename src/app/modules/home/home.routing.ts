@@ -4,12 +4,12 @@ import { HomeComponent } from 'src/app/modules/home/home.component';
 
 const routes: Routes = [
     {
-        path:'',
-        redirectTo:'myBoard',
-        pathMatch:'full'
-    },{
-        path:'myBoard',
-        component:HomeComponent
+        path: '',
+        redirectTo: 'myBoard',
+        pathMatch: 'full'
+    }, {
+        path: 'myBoard',
+        component: HomeComponent
     }
 ];
 

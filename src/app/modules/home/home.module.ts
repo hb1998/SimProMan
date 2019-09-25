@@ -14,9 +14,9 @@ import { MainBoardService } from 'src/app/modules/home/services/main-board.servi
     CommonModule,
     HomeRoutingModule,
     SharedModule
-    
+
   ],
-  providers:[MainBoardService]
-  
+  providers: [MainBoardService]
+
 })
 export class HomeModule { }
