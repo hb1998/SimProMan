@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    .side{
+        flex: 1;
+        display: flex;
+        align-items: center;
+
+        .loginContainer{
+            margin: 50px;
+            padding: 20px;
+            box-shadow: 0px 0px 20px 1px lightgray;
+            border-radius: 10px;
+            .title{
+                margin-bottom: 10px;
+                font-size: 16px;
+            }
+        }
+    
+    }
+    .main{
+        flex: 2;
+        height: 100vh;
+
+        .slideContainer{
+            height: 50%;
+            margin-top:20px;
+            margin-right: 20px; 
+            margin-left: 20px;
+        }
+    }
+}
+
+.mat-form-field{
+    width: 100%;
+    font-size: 14px;
+}

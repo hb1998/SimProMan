@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from 'src/app/core/core.module';
 import { MAT_RADIO_DEFAULT_OPTIONS } from '@angular/material';
+import { SlideshowModule } from 'ng-simple-slideshow';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { MAT_RADIO_DEFAULT_OPTIONS } from '@angular/material';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    SlideshowModule,
 
     CoreModule
   ],

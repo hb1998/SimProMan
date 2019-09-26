@@ -1,3 +1,31 @@
-<p>
-  login works!
-</p>
+<div class="container">
+  <div class="side" >
+    <div class="loginContainer">
+      <div class="title" >Login</div>
+      <form>
+          <mat-form-field appearance="outline">
+              <mat-label>Username</mat-label>
+              <input autocomplete="off" matInput placeholder="Get To work">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+              <mat-label>Password</mat-label>
+              <input autocomplete="off" matInput placeholder="Get To work">
+          </mat-form-field>
+        <button  mat-flat-button color="primary">Login</button>
+          
+      </form>
+    </div>
+  </div>
+  <div class="main">
+    <div class="slideContainer">
+      <slideshow 
+      [minHeight]="'500px'"
+      [autoPlay]="true"
+      [showArrows]="false"
+      [showDots]="true"
+      [imageUrls]="imageUrlArray"
+      >
+    </slideshow>  
+  </div>
+  </div>
+</div>
