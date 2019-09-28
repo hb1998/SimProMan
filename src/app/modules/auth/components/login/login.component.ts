@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IImage } from 'ng-simple-slideshow';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -18,9 +19,16 @@ export class LoginComponent implements OnInit {
     }
   ]
 
-  constructor() { }
+  constructor(
+    private router:Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  login(ev){
+    ev.preventDefault()
+this.router.navigateByUrl('/home')
   }
 
 }
