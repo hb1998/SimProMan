@@ -17,8 +17,8 @@
 
 
     <div class="taskActions">
-        <mat-icon *ngIf="taskType === 'inProcess' || taskType === 'done' "    matTooltip="Todo" class="todoIcon">assignment</mat-icon>
-        <mat-icon *ngIf="taskType === 'toDo'|| taskType === 'done' "   matTooltip="In Process" class="inProcessIcon">assignment_returned</mat-icon>
-        <mat-icon *ngIf="taskType === 'inProcess' || taskType === 'toDo' "    matTooltip="Done" class="doneIcon">assignment_turned_in</mat-icon>
+        <mat-icon (click)="moveTask('toDo')" *ngIf="taskType === 'inProcess' || taskType === 'done' "    matTooltip="Todo" class="todoIcon">assignment</mat-icon>
+        <mat-icon (click)="moveTask('inProcess')" *ngIf="taskType === 'toDo'|| taskType === 'done' "   matTooltip="In Process" class="inProcessIcon">assignment_returned</mat-icon>
+        <mat-icon (click)="moveTask('done')" *ngIf="taskType === 'inProcess' || taskType === 'toDo' "    matTooltip="Done" class="doneIcon">assignment_turned_in</mat-icon>
     </div>
 </div>

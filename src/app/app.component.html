@@ -1,8 +1,12 @@
 <div class="appContainer">
-  <app-sidemenu></app-sidemenu>
+  <ng-container *ngIf="isLoggedin"  >
+    <app-sidemenu></app-sidemenu>
+  </ng-container>
   <div class="innerContainer">
-    <app-header></app-header>
-    <div class="rOutlet">
+    <ng-container *ngIf="isLoggedin"  >
+      <app-header></app-header>
+    </ng-container>
+    <div [ngClass]="isLoggedin?'rOutlet':'rOutletFull'"  >
       <router-outlet  ></router-outlet>
     </div>
   </div>

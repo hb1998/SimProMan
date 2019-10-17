@@ -2,14 +2,14 @@
   <div class="side" >
     <div class="loginContainer">
       <div class="title" >Login</div>
-      <form>
+      <form [formGroup]="loginForm" >
           <mat-form-field appearance="outline">
               <mat-label>Username</mat-label>
-              <input autocomplete="off" matInput placeholder="Get To work">
+              <input formControlName="username"  autocomplete="off" matInput placeholder="Get To work">
           </mat-form-field>
           <mat-form-field appearance="outline">
               <mat-label>Password</mat-label>
-              <input autocomplete="off" matInput placeholder="Get To work">
+              <input  formControlName="password" type="password" autocomplete="off" matInput placeholder="Get To work">
           </mat-form-field>
         <button (click)="login($event)"  mat-flat-button color="primary">Login</button>
           

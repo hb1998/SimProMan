@@ -14,7 +14,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     ReactiveFormsModule,
 
   ],
-  exports: [...materialExports, PriorityComponent, AddTaskModalComponent],
+  exports: [...materialExports, PriorityComponent, AddTaskModalComponent,FormsModule,ReactiveFormsModule,],
   entryComponents: [AddTaskModalComponent]
 
 })

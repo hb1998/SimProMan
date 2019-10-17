@@ -5,10 +5,14 @@
 
   <div class="userActions">
     <mat-icon class="headerIcon">notifications_none
-      </mat-icon>
+    </mat-icon>
     <div class="account">
       <div class="userName">Habeeb</div>
-      <mat-icon class="headerIcon" >account_circle</mat-icon>
+      <mat-icon [matMenuTriggerFor]="menu" class="headerIcon">account_circle</mat-icon>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Profile</button>
+        <button mat-menu-item>Logout</button>
+      </mat-menu>
     </div>
   </div>
 </div>
