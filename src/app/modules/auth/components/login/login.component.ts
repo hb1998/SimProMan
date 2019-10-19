@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit() {
+    console.log('test')
   }
 
   login(ev) {
@@ -40,6 +41,9 @@ export class LoginComponent implements OnInit {
     console.log(this.loginForm.value)
     this.data.isLoggedIn.next(true)
     this.router.navigateByUrl('/home')
+  }
+  validateForm(){
+    
   }
 
 }
