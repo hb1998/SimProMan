@@ -12,7 +12,8 @@ export class TaskComponent implements OnInit {
 
   @Input() taskConf: Task;
   @Input() taskType: string;
-  @Output() emitAction: EventEmitter = new EventEmitter();
+  @Output() moveTasktoDest: EventEmitter = new EventEmitter();
+
   constructor(
     public mainBoardService: MainBoardService
   ) { }
@@ -66,6 +67,10 @@ export class TaskComponent implements OnInit {
     document.querySelectorAll('.task').forEach((task: HTMLElement) => {
      this.longModeSingle(task);
     });
+  }
+
+  moveTask(dest){
+    this
   }
 
 }

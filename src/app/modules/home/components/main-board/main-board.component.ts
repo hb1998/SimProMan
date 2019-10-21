@@ -130,8 +130,6 @@ export class MainBoardComponent implements OnInit {
   }
 
 
-
-
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
@@ -142,6 +140,7 @@ export class MainBoardComponent implements OnInit {
         event.currentIndex);
     }
   }
+  
 
 
 }
