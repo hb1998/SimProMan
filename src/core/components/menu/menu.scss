@@ -1,0 +1,69 @@
+.sideMenuContainer{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+
+    // placeholder
+    .simpromanLogo 
+    {
+        display: flex;
+        align-items: center;
+
+        .logoText{
+            font-size: 18px;
+            font-weight: 500;
+            font-family: 'Montserrat', sans-serif;
+            .sim{
+                color: #9955FF
+            }
+            .pro{
+                color: #00FF00;
+            }
+            .man{
+                color: #FF5555
+            }
+        }
+
+        img{
+        width: 30px;
+        height: 37.5px;
+        padding: 10px;
+        }
+    }
+
+    .sideMenuItems{
+        margin-top: 50px;
+        .item{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            .itemName{
+                padding: 20px;
+                color: darkgrey;
+               
+            }
+            .remaining{
+                padding: 2px 7px;
+                background-color: darkgrey;
+                color: white;
+                border-radius: 10px;
+                font-size: 12px;
+                transition: font-size 200ms;
+            }
+
+            &.active , &:hover {
+                .itemName{
+                    color: black;
+                }
+                .remaining{
+                    background-color: cornflowerblue;
+                    font-size: 14px;
+                }
+            }
+           
+        }
+       
+    }
+
+
+}

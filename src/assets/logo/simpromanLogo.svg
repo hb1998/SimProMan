@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="27.990326mm"
+   height="34.037659mm"
+   viewBox="0 0 27.990326 34.037658"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="simpromanLogo.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="63.552332"
+     inkscape:cy="60.214863"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-51.633626,-60.259777)">
+    <g
+       id="g848"
+       inkscape:export-xdpi="293.34"
+       inkscape:export-ydpi="293.34">
+      <g
+         id="g840">
+        <g
+           id="g833">
+          <rect
+             transform="rotate(-26.658825)"
+             style="opacity:1;fill:#00ffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.14366455"
+             id="rect817"
+             width="20.113548"
+             height="4.8767314"
+             x="10.999587"
+             y="93.242188"
+             rx="3.3774362"
+             ry="2.4383657" />
+          <rect
+             transform="rotate(-26.658825)"
+             ry="2.426204"
+             rx="3.5102613"
+             y="99.697311"
+             x="16.542591"
+             height="4.8524079"
+             width="21.074083"
+             id="rect821"
+             style="opacity:1;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.14668776" />
+          <rect
+             transform="rotate(-26.658825)"
+             style="opacity:1;fill:#ff5555;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.15612236"
+             id="rect823"
+             width="23.72036"
+             height="4.8834538"
+             x="8.9434786"
+             y="106.33557"
+             rx="3.6309819"
+             ry="2.4417269" />
+          <rect
+             transform="rotate(-26.658825)"
+             ry="2.428561"
+             rx="3.3457551"
+             y="86.928986"
+             x="13.131454"
+             height="4.8571219"
+             width="28.008095"
+             id="rect849"
+             style="opacity:1;fill:#9955ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.16918901" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

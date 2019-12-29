@@ -1,0 +1,22 @@
+.homeContainer{
+    padding: 10px;
+
+    .controlsContainer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .addTask{
+            display: flex;
+            align-items: center;
+            margin: 10px 0px 5px 10px;
+            position: sticky;
+            top: 20px;
+        }
+        .views{
+            margin-right: 20px;
+            & mat-icon{
+                cursor: pointer;
+            }
+        }
+    }
+}

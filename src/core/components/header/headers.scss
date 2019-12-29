@@ -1,0 +1,35 @@
+.headerContainer{
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .projectTitle{
+        margin-left: 20px;
+    }
+    .userActions{
+        display: flex;
+        margin-right: 10px;
+    
+        .account{
+            display: flex;
+            color: black;
+            opacity: 0.8;
+            align-items: center;
+            margin-left: 15px;
+
+            
+        }
+        .headerIcon{
+            font-size: 24px;
+            margin-left: 5px;
+            cursor: pointer;
+            color: black;
+            opacity: 0.8;
+        }
+
+    }
+
+}
